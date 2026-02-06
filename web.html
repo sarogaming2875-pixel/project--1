@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <h1 class="title">Sign in to your account</h1>
+            <form id="loginForm" novalidate>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                <label for="password">Password</label>
+                <div class="password-wrap">
+                    <input id="password" name="password" type="password" placeholder="Enter your password" required minlength="6">
+                    <button type="button" id="togglePwd" aria-label="Show password">Show</button>
+                </div>
+
+                <div class="row">
+                    <label class="checkbox">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a class="forgot" href="#">Forgot?</a>
+                </div>
+
+                <div id="message" role="status" aria-live="polite"></div>
+
+                <button class="btn" type="submit">Sign in</button>
+            </form>
+
+            <div class="divider">Or continue with</div>
+            <div class="socials">
+                <button class="social">Google</button>
+                <button class="social">GitHub</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="login.js" type="module"></script>
+</body>
+</html>
